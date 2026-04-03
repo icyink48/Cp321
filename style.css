@@ -1,0 +1,154 @@
+
+:root {
+    --bg: #f4f7fb;
+    --panel: #ffffff;
+    --border: #d6deea;
+    --text: #18212f;
+    --muted: #5f6c80;
+    --accent: #2f6fed;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.page-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+}
+
+.hero {
+    margin-bottom: 18px;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.subtext {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 10px 28px rgba(12, 28, 64, 0.06);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: end;
+    margin-bottom: 18px;
+}
+
+.control-group {
+    min-width: 220px;
+}
+
+.control-group label,
+.metric-toggle legend {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fff;
+    font-size: 1rem;
+}
+
+.metric-toggle {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px 14px 12px;
+    min-width: 260px;
+}
+
+.metric-toggle label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 16px;
+    color: var(--text);
+}
+
+.chart-panel {
+    margin-bottom: 18px;
+}
+
+.chart {
+    min-height: 480px;
+}
+
+.caption {
+    margin: 12px 0 0;
+    color: var(--muted);
+    line-height: 1.55;
+    font-size: 0.96rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.text-panel ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .metric-toggle label {
+        display: flex;
+        margin: 0 0 8px;
+    }
+
+    .chart {
+        min-height: 380px;
+    }
+}
